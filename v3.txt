@@ -1,0 +1,277 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+--⚙️ Window chính
+local Window = Rayfield:CreateWindow({
+   Name = "MinhXhub",
+   LoadingTitle = "Loading...",
+   LoadingSubtitle = "Private Hub",
+   ConfigurationSaving = {
+      Enabled = false, -- ❌ không lưu key
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "MinhXhub Key System",
+      Subtitle = "Enter your key",
+      Note = "",
+      SaveKey = false,
+      GrabKeyFromSite = false,
+      Key = {"MinhHub"},
+      UseLoadButton = true
+   },
+   Theme = "Blue"
+})
+
+-- 📐 Chỉnh UI scale và font to hơn
+Rayfield.DefaultSettings = {
+   Font = Enum.Font.GothamBold,
+   TextSize = 18,
+   ElementSize = UDim2.new(0, 250, 0, 45),
+   TabWidth = 160,
+   SectionSpacing = 12
+}
+
+-- CREDIT TAB
+local CreditTab = Window:CreateTab("Credit")
+CreditTab:CreateLabel("THIS SCRIPT WAS CREATED BY MINH")
+CreditTab:CreateLabel("THIS IS A COMPILATION HUB")
+
+CreditTab:CreateButton({
+   Name = "Copy Discord: vuminh._0",
+   Callback = function()
+      setclipboard("vuminh._0")
+      Rayfield:Notify({
+         Title = "Copied!",
+         Content = "Discord username copied to clipboard.",
+         Duration = 3
+      })
+   end,
+})
+
+-- TSB TAB
+local TSBTab = Window:CreateTab("TSB")
+
+TSBTab:CreateButton({
+   Name = "Supa Tech",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MerebennieOfficial/ExoticJn/refs/heads/main/Supa%20V3"))()
+   end,
+})
+
+TSBTab:CreateButton({
+   Name = "Lethal Dash",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/InstantLethal/refs/heads/main/Protected_5983112998592296.lua"))()
+   end,
+})
+
+TSBTab:CreateButton({
+   Name = "Kiba V3",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/yqantg-pixel/Find/refs/heads/main/Protected_1593573630798166.lua.txt"))()
+   end,
+})
+
+TSBTab:CreateButton({
+   Name = "Side Dash",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/FakeDash/refs/heads/main/Protected_5833389828844912.lua"))()
+   end,
+})
+
+-- FIX LAG TAB
+local FixLagTab = Window:CreateTab("Fix Lag")
+
+FixLagTab:CreateButton({
+   Name = "Bloxstrap (Mobile)",
+   Callback = function()
+      getgenv().autosetup = {
+         path = 'Bloxstrap',
+         setup = true
+      }
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/main/Initiate.lua'))()
+   end,
+})
+
+FixLagTab:CreateButton({
+   Name = "Fix Lag V1 (~50%)",
+   Callback = function()
+      settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+      setfpscap(60)
+   end,
+})
+
+FixLagTab:CreateButton({
+   Name = "Fix Lag V2 (~80%)",
+   Callback = function()
+      settings().Rendering.QualityLevel = Enum.QualityLevel.Automatic
+      setfpscap(30)
+      game.Lighting.GlobalShadows = false
+      game.Lighting.FogEnd = 9e9
+      for _,v in pairs(workspace:GetDescendants()) do
+         if v:IsA("BasePart") then
+            v.Material = Enum.Material.Plastic
+            v.Reflectance = 0
+         end
+      end
+   end,
+})
+
+FixLagTab:CreateButton({
+   Name = "Fix Lag V3 (Max)",
+   Callback = function()
+      setfpscap(20)
+      game.Lighting.GlobalShadows = false
+      game.Lighting.FogEnd = 9e9
+      for _,v in pairs(workspace:GetDescendants()) do
+         if v:IsA("BasePart") then
+            v.Material = Enum.Material.SmoothPlastic
+            v.Reflectance = 0
+         elseif v:IsA("Decal") or v:IsA("Texture") then
+            v:Destroy()
+         end
+      end
+   end,
+})
+
+-- HYPERSHOT TAB
+local HyperTab = Window:CreateTab("Hypershot")
+
+HyperTab:CreateButton({
+   Name = "FeykScript",
+   Callback = function()
+      loadstring(game:HttpGet("https://rawscripts.net/raw/NEW!-Hypershot-(Gunfight)-Feykhub-Keyless-47349"))()
+   end,
+})
+
+HyperTab:CreateButton({
+   Name = "XVC Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XVCHub/Games/main/HyperShot"))()
+   end,
+})
+
+-- 99 NIGHTS TAB
+local ForestTab = Window:CreateTab("99 Nights in the Forest")
+
+ForestTab:CreateButton({
+   Name = "Vxeze",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHub99daysintheforest.lua"))()
+   end,
+})
+
+ForestTab:CreateButton({
+   Name = "Voidware",
+   Callback = function()
+      loadstring(game:HttpGet("https://rawscripts.net/raw/99-Nights-in-the-Forest-Voidware-48939"))()
+   end,
+})
+
+ForestTab:CreateButton({
+   Name = "Mirrozz",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Qiwikox12/stubrawl/refs/heads/main/99Night.txt"))()
+   end,
+})
+
+ForestTab:CreateButton({
+   Name = "Foxname",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()
+   end,
+})
+
+ForestTab:CreateButton({
+   Name = "Vex",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/yoursvexyyy/99-days-in-forest/refs/heads/main/vex%20op%20full%20gui"))()
+   end,
+})
+
+-- BLOX FRUITS TAB
+local BFruitTab = Window:CreateTab("Blox Fruits")
+
+BFruitTab:CreateButton({
+   Name = "Xeter",
+   Callback = function()
+      getgenv().Version = "V1"
+      getgenv().Team = "Marines"
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TlDinhKhoi/Xeter/refs/heads/main/Main.lua"))()("t.me/XScepTskX")
+   end,
+})
+
+BFruitTab:CreateButton({
+   Name = "Banana",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/kimprobloxdz/Banana-Free/refs/heads/main/Protected_5609200582002947.lua.txt"))()
+   end,
+})
+
+BFruitTab:CreateButton({
+   Name = "Idk Script",
+   Callback = function()
+      getgenv().Team = "Pirates"
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/AkGamingEz/refs/heads/main/AkGaming-V3"))()
+   end,
+})
+
+-- Thêm nút Aimbot cho Blox Fruits (hiện đã có 1 nút Aimbot trước đó)
+BFruitTab:CreateButton({
+   Name = "Aimbot",
+   Callback = function()
+      local url = "https://raw.githubusercontent.com/ParadozCode/ParadozHub-/refs/heads/main/Paradoz%20Hub%20CentuDox.lua"
+      -- Dùng pcall để bắt lỗi khi HttpGet/loadstring/run
+      local ok, res = pcall(function()
+         -- nếu executor có HttpGetAsync ưu tiên dùng nó; nếu không, HttpGet vẫn ok
+         local http_get = (syn and syn.request) and function(u) return syn.request({Url = u, Method = "GET"}).Body end
+                           or (request and function(u) return request({Url = u, Method = "GET"}).Body end)
+                           or function(u) return game:HttpGet(u) end
+
+         local source = http_get(url)
+         if not source or source == "" then
+            error("HttpGet trả về rỗng hoặc nil. Kiểm tra URL/Internet/Repo permission.")
+         end
+
+         local func, load_err = loadstring(source)
+         if not func then
+            error("loadstring lỗi: " .. tostring(load_err))
+         end
+
+         -- Thực thi script trong pcall riêng để bắt lỗi runtime của script
+         local exec_ok, exec_err = pcall(func)
+         if not exec_ok then
+            error("Script chạy bị lỗi runtime: " .. tostring(exec_err))
+         end
+      end)
+
+      if not ok then
+         -- Hiện thông báo lỗi rõ ràng trong Output và popup nếu có thể
+         warn("[Aimbot] Lỗi khi tải/chạy script: " .. tostring(res))
+         -- Thử hiện popup qua StarterGui (nếu exploit cho phép)
+         pcall(function()
+            local StarterGui = game:GetService("StarterGui")
+            StarterGui:SetCore("SendNotification", {
+               Title = "Aimbot Error",
+               Text = tostring(res),
+               Duration = 8,
+            })
+         end)
+      else
+         print("[Aimbot] Script đã tải và chạy thành công.")
+      end
+   end,
+})
+
+-- NEW: Aimbot (PC) button that runs the SilentAim script provided by the user
+BFruitTab:CreateButton({
+   Name = "slient aimbot",
+   Callback = function()
+      pcall(function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/danghoangvukizo-crypto/slientaim/refs/heads/main/slientaim.txt"))()
+      end)
+   end,
+})
+
+-- Kết thúc file
+print("MinhXhub UI loaded")
+print("MinhXhub UI loaded")
